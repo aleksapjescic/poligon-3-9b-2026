@@ -35,6 +35,7 @@ namespace poligon_3_9b_2026
             Tacka druga = new Tacka(7, 6);
             Vektor a = new Vektor(prva, druga);
             Console.WriteLine(Ravan.SIS(a, A, B));
+            
         }
     }
 }
