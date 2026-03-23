@@ -10,6 +10,7 @@ namespace poligon_3_9b_2026
     {
         static void Main(string[] args)
         {
+            //vasilije pomogao jer je kralj znas kao
             // pjeske kida
             // Tacka prva = new Tacka();
             // Console.WriteLine(prva.d());
