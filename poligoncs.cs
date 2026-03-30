@@ -1,4 +1,4 @@
-﻿using poligon_3_9b_2026;
+using poligon_3_9b_2026;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -77,28 +77,23 @@ namespace poligon_2026_3_10_a
         }
         public double obim()
         {
-            vektor[] str = stranice();
+            vektor a;
             double obim = 0;
-            for (int i = 0; i < br_temena; i++)
+            for (int i = 0; i < br_temena - 1; i++)
             {
-                obim += str[i].duzina();
+                a = new vektor(teme[i], teme[i + 1]);
+                obim += a.duzina();
             }
+            a = new vektor(teme[br_temena - 1], teme[0]);
+            obim += a.duzina();
             return obim;
+        }
+        public double duzina()
+        {
+            return obim();
         }
         public bool prost()
         {
-            /*
-            bool isto = false;
-            for (int i = 0; i < br_temena-1; i++)
-            {
-                for (int j = i+1; j < br_temena; j++)
-                {
-                    if (tacka.jednake(teme[i], teme[j])) isto = true;
-                }
-            }
-            Console.WriteLine("isto="+ isto.ToString());
-            if (isto) return false;
-            */
             vektor[] str = stranice();
             bool presek = false;
             for (int i = 0; i < br_temena - 2; i++)
